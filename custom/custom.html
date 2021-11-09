@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Lobster&family=Mochiy+Pop+P+One&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="custom.css">
         <script defer src="https://kit.fontawesome.com/ae5dbc9065.js" crossorigin="anonymous"></script>
         <script defer src="custom.js"></script>
@@ -13,12 +16,21 @@
         <h1>Coffee Mug</h1>
         <div id="input-box">
             <p>Customize your mug:</p>
-            <label for="text">text: </label>
-            <input class="input" type="text" name="text" maxlength="20" id="text-input">
+            <label for="text">Text: </label>
+            <input class="input" type="text" name="text" maxlength="20" value="I am a default mug" id="text-input">
             <label for="size">Size: </label>
             <input class="input" type="number" name="size" min="4" max="60" id="size-input" value="16">
+            <label for="font-family">Font Style: </label>
+            <select name="font-family" id="font-family-input">
+                <option value="'Anton', sans-serif">Anton</option>
+                <option value="'Dancing Script', cursive">Dancing Script</option>
+                <option value="'Lobster', cursive">Lobster</option>
+                <option value="'Mochiy Pop P One', sans-serif">Mochiy Pop P One</option>
+                <option value="'Playfair Display', serif">Playfair Display</option>
+            </select>
             <label for="color">Color: </label>
             <input type="color" name="color" id="color-input">
+            <p>Click the arrows to move the text on the cup:</p>
             <div id="arrow-box">
                 <div class="fas" id="up">&#8593;</div>
                 <div class="fas" id="right">&#8594;</div>

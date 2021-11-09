@@ -7,4 +7,5 @@ window.addEventListener('load', () => {
     imageText.style.top = sessionStorage.top;
     imageText.style.left = sessionStorage.left;
     imageText.innerHTML = sessionStorage.text;
+    imageText.style.fontFamily = sessionStorage.fontFamily;
 })

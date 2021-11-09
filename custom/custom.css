@@ -3,6 +3,11 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    background-color: #ffb997;
+}
+
 #image-box {
     display: flex;
     justify-content: center;
@@ -36,6 +41,7 @@
 }
 
 #image-text {
+    font-family: 'Anton', sans-serif;
     position: absolute;
     top: 50%;
     left: 35%;
@@ -43,8 +49,6 @@
 }
 
 #arrow-box {
-    border-radius: 50%;
-    border: 1px solid black;
     width: 60px;
     height: 60px;
     position: relative;
@@ -60,12 +64,12 @@
 
 #up {
     top: 0; 
-    left: 23px; 
+    left: 20px; 
 
 }
 
 #right {
-    right: -5px;
+    right: 0;
     top: 20px;
 }
 
@@ -75,8 +79,8 @@
 }
 
 #down {
-    bottom: -5px;
-    left: 23px;
+    bottom: -15px;
+    left: 20px;
 }
 
 a {

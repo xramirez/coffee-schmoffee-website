@@ -1,7 +1,8 @@
 const textInput = document.getElementById('text-input');
 const imageText = document.getElementById('image-text');
 const sizeInput = document.getElementById('size-input');
-const colorInput = document.getElementById('color-input')
+const colorInput = document.getElementById('color-input');
+const fontFamilyInput = document.getElementById('font-family-input')
 const up = document.getElementById('up');
 const right = document.getElementById('right');
 const left = document.getElementById('left');
@@ -12,7 +13,9 @@ let xAxis = 150;
 let yAxis = 250;
 let size = 16;
 let color = '#000000';
-let text = ''
+let text = '';
+
+
 
 let active = 1;
 
@@ -37,6 +40,12 @@ sizeInput.addEventListener('keyup', (event) => {
     size = event.target.value;
     imageText.style.fontSize = `${event.target.value}px`;
     sessionStorage.size = `${size}px`;
+})
+
+fontFamilyInput.addEventListener('change', (event) => {
+    console.log(event.target.value);
+    imageText.style.fontFamily = event.target.value;
+    sessionStorage.fontFamily = event.target.value;
 })
 
 colorInput.addEventListener('change', (event) => {
@@ -70,5 +79,10 @@ right.addEventListener('click', () => {
 })
 
 window.addEventListener('load', () => {
-    sessionStorage.clear();
+    sessionStorage.xAxis = '150px';
+    sessionStorage.yAxis = '250px';
+    sessionStorage.size = 16;
+    sessionStorage.color = '#000000';
+    sessionStorage.text = 'I am a default mug';
+    sessionStorage.fontFamily = "'Anton', sans-serif;"
 })
