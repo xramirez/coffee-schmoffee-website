@@ -11,23 +11,27 @@
     </head>
     <body>
         <h1>Coffee Mug</h1>
-        <p>Customize your mug:</p>
-        <label for="text">text: </label>
-        <input type="text" name="text" maxlength="20" id="text-input">
-        <label for="size">Size: </label>
-        <input type="number" name="size" min="4" max="60" id="size-input" value="16">
-        <label for="color">Color: </label>
-        <input type="color" name="color" id="color-input">
-        <div id="arrow-box">
-            <i class="fas fa-arrow-up" id="up"></i>
-            <i class="fas fa-arrow-right" id="right"></i>
-            <i class="fas fa-arrow-left" id="left"></i>
-            <i class="fas fa-arrow-down" id="down"></i>
+        <div id="input-box">
+            <p>Customize your mug:</p>
+            <label for="text">text: </label>
+            <input class="input" type="text" name="text" maxlength="20" id="text-input">
+            <label for="size">Size: </label>
+            <input class="input" type="number" name="size" min="4" max="60" id="size-input" value="16">
+            <label for="color">Color: </label>
+            <input type="color" name="color" id="color-input">
+            <div id="arrow-box">
+                <div class="fas" id="up">&#8593;</div>
+                <div class="fas" id="right">&#8594;</div>
+                <div class="fas" id="left">&#8592;</div>
+                <div class="fas" id="down">&#8595;</div>
+            </div>
+            </div>
         </div>
         <div id="image-box">
             <img src="coffee-mug.jpeg">
             <p id="image-text"></p>
         </div>
         <a href="../order/order.html"><button id="save-button">Save Your Mug</button></a>
+        <i class="fas fa-arrow-circle-up"></i>
     </body>
 </html>

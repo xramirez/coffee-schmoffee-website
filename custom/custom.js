@@ -14,6 +14,13 @@ let size = 16;
 let color = '#000000';
 let text = ''
 
+let active = 1;
+
+const fas = document.getElementsByClassName('fas');
+for(let i = 0; i < fas.length; i++) {
+    fas[i].setAttribute('class', 'fas active');
+}
+
 textInput.addEventListener('keyup', (event) => {
     imageText.innerHTML = event.target.value;
     text = event.target.value;
@@ -47,7 +54,7 @@ up.addEventListener('click', () => {
 down.addEventListener('click', () => {
     yAxis += 5;
     imageText.style.top = `${yAxis}px`;
-    sessionStorage.top= `${yAxis}px`;
+    sessionStorage.top = `${yAxis}px`;
 })
 
 left.addEventListener('click', () => {
