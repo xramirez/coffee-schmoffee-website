@@ -1,0 +1,22 @@
+body {
+    background : #ffb997
+}
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;    
+}
+
+#mainNavbar .nav-link {
+    color: black;
+}
+
+.navbar.scrolled {
+    background: #f67e7d;
+    transition: background 500ms;
+}
