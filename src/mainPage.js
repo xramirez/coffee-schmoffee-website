@@ -12,7 +12,7 @@ function nextSlide()
     
     for(let i = 0; i < slides.length; i++)
     {
-        if(i == active_slide)
+        if(i == active_slide % slides.length)
         {
             slides[i].setAttribute('class' , 'slide active');
         }

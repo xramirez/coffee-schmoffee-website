@@ -31,18 +31,23 @@ body {
 }
 
 .slides_container {
-    height:90px;
-    width:90px;
+    height:500px;
+    width:1000px;
+    border-radius: 25px;
+    background-color: #843b62;
     overflow:hidden;
     position:relative;
 }
-.inactive {
+.slides_container .slide {
+    height: 100%;
+    width: 100%;
+    margin-top: 200px;
     position:absolute;
     visibility:hidden;
     opacity:0;
     transition:opacity 1s ease, visibility 0s ease 1s;
 }
-.active {
+.slides_container .slide.active {
     z-index : 10;
     visibility:visible;
     opacity:1;
