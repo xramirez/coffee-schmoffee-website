@@ -9,14 +9,42 @@ body {
 
 #mainNavbar {
     font-size: 1.5rem;
-    font-weight: 100;    
+    font-weight: 200;    
 }
 
 #mainNavbar .nav-link {
-    color: black;
+    color: #843b62
+}
+
+#mainNavbar .nav-link:hover {
+    color: #0b032d
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
 }
 
 .navbar.scrolled {
     background: #f67e7d;
     transition: background 500ms;
+}
+
+.slides_container {
+    height:90px;
+    width:90px;
+    overflow:hidden;
+    position:relative;
+}
+.inactive {
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity 1s ease, visibility 0s ease 1s;
+}
+.active {
+    z-index : 10;
+    visibility:visible;
+    opacity:1;
+    transition:opacity 1s ease;
 }
