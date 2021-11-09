@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+#image-box {
+    position: relative;
+}
+
+#image-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    max-width: 100px;
+}
+
+#arrow-box {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.fas {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+#up {
+    top: 0; 
+    left: 20px; 
+
+}
+
+#right {
+    right: 0;
+    top: 20px;
+}
+
+#left {
+    left: 0;
+    top: 20px;
+}
+
+#down {
+    bottom: 0;
+    left: 20px;
+}
