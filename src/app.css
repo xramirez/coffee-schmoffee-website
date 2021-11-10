@@ -30,6 +30,28 @@ body {
     transition: background 500ms;
 }
 
+#hamburger-box {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    visibility: hidden;
+}
+
+#hamburger-box img {
+    width: 100%;
+}
+
+#x-box {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    visibility: hidden;
+}
+
+#x-box img {
+    width: 100%;
+}
+
 .slides_container {
     height:500px;
     width:1000px;
@@ -53,3 +75,23 @@ body {
     opacity:1;
     transition:opacity 1s ease;
 }
+/* 
+@media screen and (max-width: 800px) {
+    #navbarBrand {
+        visibility: hidden;
+    }
+
+    #navbarNav {
+        visibility: hidden;
+        flex-direction: column;
+    }
+
+    #hamburger {
+        visibility: visible;
+    }
+
+    #mainNavbar {
+        display: flex;
+        flex-direction: column;
+    }
+} */

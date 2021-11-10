@@ -91,7 +91,15 @@ window.addEventListener('load', () => {
     sessionStorage.size = 16;
     sessionStorage.color = '#000000';
     sessionStorage.text = 'I am a default mug';
-    sessionStorage.fontFamily = "'Anton', sans-serif;"
+    sessionStorage.fontFamily = "'Anton', sans-serif";
+    if (window.innerWidth < 800) {
+        navbarBrand.style.visibility = 'hidden';
+        navbarNav.style.visibility = 'hidden';
+        hamburger.style.visibility = 'visible';
+        mainNavbar.style.display = "flex";
+        mainNavbar.style.flexDirection = 'column';
+        navbarNav.style.flexDirection = 'column';
+    }
 })
 
 window.addEventListener('resize', () => {
@@ -150,3 +158,4 @@ custom.addEventListener('click', () => {
         xBox.style.visibility = 'hidden';
     }
 })
+
