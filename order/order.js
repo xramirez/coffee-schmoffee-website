@@ -1,6 +1,7 @@
 const imageText = document.getElementById('image-text');
 const amount = document.getElementById('amount');
 const total = document.getElementById('total');
+const confirmButton = document.getElementById('confirm-button');
 
 window.addEventListener('load', () => {
     console.log('loaded');
@@ -13,5 +14,10 @@ window.addEventListener('load', () => {
 })
 
 amount.addEventListener('change', (event) => {
-    total.innerHTML = `$${(Number(event.target.value) * 9.95).toFixed(2)} Total Cost`; 
+    if (Number(event.target.value) > 0) {
+        total.innerHTML = `$${(Number(event.target.value) * 9.95).toFixed(2)} Total Cost`; 
+        confirmButton.style.visibility = 'visible';
+    } else {
+        confirmButton.style.visibility = 'hidden';
+    }
 })

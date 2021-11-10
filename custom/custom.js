@@ -8,9 +8,12 @@ const right = document.getElementById('right');
 const left = document.getElementById('left');
 const down = document.getElementById('down');
 const saveButton = document.getElementById('save-button');
+const navbarBrand = document.getElementById('navbar-brand');
+const navbarNav = document.getElementById('navbar-nav');
+const hamburger = document.getElementById('hamburger-box');
 
-let xAxis = 150;
-let yAxis = 250;
+let xAxis = 30;
+let yAxis = 30;
 let size = 16;
 let color = '#000000';
 let text = '';
@@ -55,34 +58,46 @@ colorInput.addEventListener('change', (event) => {
 })
 
 up.addEventListener('click', () => {
-    yAxis -= 5;
-    imageText.style.top = `${yAxis}px`;
-    sessionStorage.top = `${yAxis}px`;
+    yAxis -= 1;
+    imageText.style.top = `${yAxis}%`;
+    sessionStorage.top = `${yAxis}%`;
 });
 
 down.addEventListener('click', () => {
-    yAxis += 5;
-    imageText.style.top = `${yAxis}px`;
-    sessionStorage.top = `${yAxis}px`;
+    yAxis += 1;
+    imageText.style.top = `${yAxis}%`;
+    sessionStorage.top = `${yAxis}%`;
 })
 
 left.addEventListener('click', () => {
-        xAxis -= 5;
-        imageText.style.left = `${xAxis}px`;
-        sessionStorage.left = `${xAxis}px`;
+        xAxis -= 1;
+        imageText.style.left = `${xAxis}%`;
+        sessionStorage.left = `${xAxis}%`;
 })
 
 right.addEventListener('click', () => {
-    xAxis += 5;
-    imageText.style.left = `${xAxis}px`;
-    sessionStorage.left = `${xAxis}px`;
+    xAxis += 1;
+    imageText.style.left = `${xAxis}%`;
+    sessionStorage.left = `${xAxis}%`;
 })
 
 window.addEventListener('load', () => {
-    sessionStorage.xAxis = '150px';
-    sessionStorage.yAxis = '250px';
+    sessionStorage.xAxis = '30%';
+    sessionStorage.yAxis = '30%';
     sessionStorage.size = 16;
     sessionStorage.color = '#000000';
     sessionStorage.text = 'I am a default mug';
     sessionStorage.fontFamily = "'Anton', sans-serif;"
+})
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 800) {
+        navbarBrand.style.visibility = 'hidden';
+        navbarNav.style.visibility = 'hidden';
+        hamburger.style.visibility = 'visible';
+    } else {
+        navbarBrand.style.visibility = 'visible';
+        navbarNav.style.visibility = 'visible';
+        hamburger.style.visibility = 'hidden';
+    }
 })

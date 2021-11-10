@@ -22,6 +22,7 @@ nav {
     display: flex;
     font-family: 'Quicksand', sans-serif;
     padding: 10px;
+    position: relative;
 }
 
 #mainNavbar {
@@ -56,6 +57,28 @@ nav {
     display: flex;
 }
 
+#hamburger-box {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    visibility: hidden;
+}
+
+#hamburger-box img {
+    width: 100%;
+}
+
+#x-box {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    visibility: hidden;
+}
+
+#x-box img {
+    width: 100%;
+}
+
 h1 {
     margin: 20px 0;
 }
@@ -64,9 +87,13 @@ h1 {
     display: flex;
     justify-content: center;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 50%;
+    height: inherit;
     margin: 0 auto;
+}
+
+#image-box img {
+    width: 75%;
 }
 
 #input-box {
@@ -75,7 +102,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    height: 250px;
+    height: inherit;
     margin: 0 auto;
     padding: 10px;
     box-shadow: 5px 5px 10px #843b62;
@@ -85,6 +112,7 @@ h1 {
     width: 50%;
     border-radius: 10px;
     padding-left: 5px;
+    margin-bottom: 2px;
 }
 
 .input[type="color"] {
@@ -110,8 +138,8 @@ hr {
 #image-text {
     font-family: 'Anton', sans-serif;
     position: absolute;
-    top: 50%;
-    left: 35%;
+    top: 30%;
+    left: 30%;
     max-width: 100px;
 }
 
@@ -120,13 +148,15 @@ hr {
     height: 60px;
     position: relative;
     padding: 2px;
+    margin-top: 5px;
 }
 
 .fas {
     position: absolute;
     width: 20px;
-    height: 20px;
+    max-height: 20px;
     cursor: pointer;
+    margin: auto;
 }
 
 #up {
@@ -146,7 +176,7 @@ hr {
 }
 
 #down {
-    bottom: -15px;
+    bottom: 0px;
     left: 20px;
 }
 
@@ -163,7 +193,14 @@ button {
     border-radius: 5px;
     background-color: #843b62;
     color: white;
-    margin-top: 10px;
+    cursor: pointer;
+}
+
+#to-confirm {
+    width: 100px;
+    height: 50px;
+    margin: 10px auto;
+    cursor: pointer;
 }
 
 #save-button {
@@ -175,7 +212,13 @@ button {
 }
 
 #confirm-button {
-    position: absolute;
-    bottom: 10px;
     margin: 0 auto;
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+#instructions {
+    width: 30%;
+    margin: 0 auto;
+    line-height: 2rem;
 }
