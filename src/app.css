@@ -53,10 +53,8 @@ body {
 }
 
 .slides_container {
-    /* height:500px;
-    width:1000px; */
-    width: 90%;
-    height: inherit;
+    height:500px;
+    width:1000px;
     border-radius: 25px;
     background-color: #843b62;
     overflow:hidden;
