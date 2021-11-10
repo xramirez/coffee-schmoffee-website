@@ -113,7 +113,8 @@ h1 {
 
 .input {
     width: 50%;
-    border-radius: 10px;
+    height: 30px;
+    border-radius: 15px;
     padding-left: 5px;
     margin-bottom: 2px;
     font-family: 'Mohave', sans-serif;
@@ -121,6 +122,10 @@ h1 {
 
 .input[type="color"] {
     width: 20px;
+}
+
+.input:hover {
+    background-color: lightgray;
 }
 
 hr {

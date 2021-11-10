@@ -23,9 +23,6 @@ let color = '#000000';
 let text = '';
 
 
-
-let active = 1;
-
 const fas = document.getElementsByClassName('fas');
 for(let i = 0; i < fas.length; i++) {
     fas[i].setAttribute('class', 'fas active');

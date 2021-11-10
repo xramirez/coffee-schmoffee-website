@@ -8,26 +8,53 @@ const home = document.getElementById('home');
 const custom = document.getElementById('custom');
 
 
+
+const quoteArr = [{
+    quote: `"My Fellow Americans... The Coffee Mug is the best! I won't have to worry about
+    burns ever again!"`,
+    author: '- Former President Barack Obama'
+},
+{
+    quote: `"There's honestly nothing like the Coffee Mug. This product enlightened me..."`,
+    author: '- Mahatma Ghandi'
+},
+{
+    quote: `"The Coffee Mug changed my life. I honestly can't imagine living without it!"`,
+    author: '- Elon Musk'
+},
+{
+    quote: `"You honestly can't see the benefits of the Coffee Mug until you buy it."`,
+    author: '- John Cena'
+},
+{
+    quote: `"CAN YOU SMELL... WHAT THE COFFEE MUG IS COOKIN'???"`,
+    author: "- Dwayne 'The Rock' Johnson"
+},
+{
+    quote: `"... You mean the Coffee Mug? It's like family to me..."`,
+    author: '- Vin Diesel'
+},
+{
+    quote: `"Don't believe everything you read on the internet... except that the Coffee Mug is great!"`,
+    author: '- Former President Abraham Lincoln'
+},
+{
+    quote: `"You get a coffee mug! And <i>YOU</i> get a Coffee Mug!"`,
+    author: '- Oprah Winfrey'
+}
+];
+
 let interval = 5000;
 let active_slide = 0;
-let numOfSlides = slides.length;
+let numSlides = quoteArr.length;
 
-function nextSlide()
-{
-    active_slide += 1;
-    
-    
-    for(let i = 0; i < slides.length; i++)
-    {
-        if(i == active_slide % slides.length)
-        {
-            slides[i].setAttribute('class' , 'slide active');
-        }
-        else
-        {
-            slides[i].setAttribute('class', 'slide inactive');
-        }
-    }
+function nextSlide() {
+    const author = document.getElementById('author');
+    const quote = document.getElementById('quote');
+    active_slide = (active_slide + 1) % numSlides;
+
+    author.innerHTML = quoteArr[active_slide].author;
+    quote.innerHTML = quoteArr[active_slide].quote;
 }
 
 setInterval(nextSlide, interval)
