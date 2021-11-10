@@ -8,6 +8,49 @@ body {
     background-color: #ffb997;
 }
 
+main {
+    top: 50px;
+    font-family: 'Mohave', sans-serif;
+}
+
+nav {
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 200;    
+}
+
+#mainNavbar .nav-link {
+    color: #843b62
+}
+
+#mainNavbar .nav-link:hover {
+    color: #0b032d
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
+}
+
+.navbar.scrolled {
+    background: #f67e7d;
+    transition: background 500ms;
+}
+
+.nav-item {
+    list-style: none;
+    padding: 0 0 0 20px;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
 #image-box {
     display: flex;
     justify-content: center;
@@ -25,12 +68,18 @@ body {
     width: 50%;
     height: 250px;
     margin: 0 auto;
-    border: 1px solid black;
     padding: 10px;
+    box-shadow: 5px 5px 10px #843b62;
 }
 
 .input {
     width: 50%;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.input[type="color"] {
+    width: 20px;
 }
 
 #text-box {
@@ -95,6 +144,9 @@ a {
     height: 50px;
     box-shadow: 5px 5px 10px gray;
     border-radius: 5px;
+    background-color: #843b62;
+    color: white;
+    margin-top: 10px;
 }
 
 #save-button:active {
