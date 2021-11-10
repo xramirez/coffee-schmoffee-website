@@ -57,22 +57,25 @@ nav {
     display: flex;
 }
 
-#hamburger-box {
+#hamburger-box, #x-box {
     width: 30px;
     position: absolute;
     right: 10px;
     visibility: hidden;
 }
+
+#hamburger-box, #x-box {
+    cursor: pointer;
+}
+
+#hamburger-box:hover, #x-box:hover {
+    width: 35px;
+    transition: width .4s;
+}
+
 
 #hamburger-box img {
     width: 100%;
-}
-
-#x-box {
-    width: 30px;
-    position: absolute;
-    right: 10px;
-    visibility: hidden;
 }
 
 #x-box img {
@@ -80,7 +83,7 @@ nav {
 }
 
 h1 {
-    margin: 20px 0;
+    margin: 20px 0 20px 20px;
 }
 
 #image-box {
@@ -113,6 +116,7 @@ h1 {
     border-radius: 10px;
     padding-left: 5px;
     margin-bottom: 2px;
+    font-family: 'Mohave', sans-serif;
 }
 
 .input[type="color"] {
