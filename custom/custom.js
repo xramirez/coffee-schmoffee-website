@@ -10,7 +10,11 @@ const down = document.getElementById('down');
 const saveButton = document.getElementById('save-button');
 const navbarBrand = document.getElementById('navbar-brand');
 const navbarNav = document.getElementById('navbar-nav');
+const mainNavbar = document.getElementById('mainNavbar');
 const hamburger = document.getElementById('hamburger-box');
+const xBox = document.getElementById('x-box');
+const home = document.getElementById('home');
+const custom = document.getElementById('custom');
 
 let xAxis = 30;
 let yAxis = 30;
@@ -95,9 +99,54 @@ window.addEventListener('resize', () => {
         navbarBrand.style.visibility = 'hidden';
         navbarNav.style.visibility = 'hidden';
         hamburger.style.visibility = 'visible';
+        mainNavbar.style.display = "flex";
+        mainNavbar.style.flexDirection = 'column';
+        navbarNav.style.flexDirection = 'column';
     } else {
-        navbarBrand.style.visibility = 'visible';
-        navbarNav.style.visibility = 'visible';
+        navbarBrand.removeAttribute('style');
+        navbarNav.removeAttribute('style');
+        mainNavbar.removeAttribute('style');
         hamburger.style.visibility = 'hidden';
+    }
+})
+
+hamburger.addEventListener('click', () => {
+    navbarNav.style.visibility = 'visible';
+    navbarBrand.style.visibility = 'visible';
+    hamburger.style.visibility = 'hidden';
+    xBox.style.visibility = 'visible';
+})
+
+xBox.addEventListener('click', () => {
+    navbarNav.style.visibility = 'hidden';
+    navbarBrand.style.visibility = 'hidden';
+    hamburger.style.visibility = 'visible';
+    xBox.style.visibility = 'hidden';
+})
+
+navbarBrand.addEventListener('click', () => {
+    if (window.innerWidth < 800) {
+        navbarNav.style.visibility = 'hidden';
+        navbarBrand.style.visibility = 'hidden';
+        hamburger.style.visibility = 'visible';
+        xBox.style.visibility = 'hidden';
+    }
+})
+
+home.addEventListener('click', () => {
+    if (window.innerWidth < 800) {
+        navbarNav.style.visibility = 'hidden';
+        navbarBrand.style.visibility = 'hidden';
+        hamburger.style.visibility = 'visible';
+        xBox.style.visibility = 'hidden';
+    }
+})
+
+custom.addEventListener('click', () => {
+    if (window.innerWidth < 800) {
+        navbarNav.style.visibility = 'hidden';
+        navbarBrand.style.visibility = 'hidden';
+        hamburger.style.visibility = 'visible';
+        xBox.style.visibility = 'hidden';
     }
 })

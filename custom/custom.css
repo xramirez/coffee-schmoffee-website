@@ -140,7 +140,8 @@ hr {
     position: absolute;
     top: 30%;
     left: 30%;
-    max-width: 100px;
+    width: 100px;
+    line-height: normal;
 }
 
 #arrow-box {
